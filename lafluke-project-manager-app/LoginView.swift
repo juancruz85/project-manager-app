@@ -54,6 +54,10 @@ struct LoginView: View {
                     RoundedRectangle(cornerRadius: 8)
                         .strokeBorder(Color(.cardBorder), lineWidth: 1)
                 )
+                .shadow(color: Color(red:25/255, green: 32/255, blue: 40/255).opacity(0.2),
+                        radius: 1, y:1)
+                .shadow(color: Color(red:25/255, green: 32/255, blue: 40/255).opacity(0.2),
+                        radius: 10, y:10)
                 
                 Spacer()
             }
