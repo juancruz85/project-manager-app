@@ -31,7 +31,6 @@ struct LoginView: View {
 
                     TextField("Email", text: $email)
                     SecureField("Password", text: $password)
-                        .textFieldStyle(.roundedBorder)
 
                     Button("Login") { }
 
@@ -41,6 +40,22 @@ struct LoginView: View {
                 }
                 .padding(20)
                 .frame(maxWidth: 384)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(
+                            LinearGradient(
+                                colors: [Color(.cardTop), Color(.cardBottom)],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .strokeBorder(Color(.cardBorder), lineWidth: 1)
+                )
+                
+                Spacer()
             }
         }
     }
